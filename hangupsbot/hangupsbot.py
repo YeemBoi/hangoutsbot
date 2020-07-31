@@ -136,7 +136,7 @@ class HangupsBot(object):
         # Authenticate Google user and save auth cookies
         # (or load already saved cookies)
         try:
-            cookies = hangups.auth.get_auth_stdin(cookies_path)
+            cookies = hangups.auth.get_auth_stdin(cookies_path, manual_login=True)
             return cookies
 
         except hangups.GoogleAuthError as e:
